@@ -1,0 +1,15 @@
+# Ignore everything
+/*
+
+# But include the following directories and files
+!/src
+!/rabbitmq
+!composer.json
+!composer.lock
+
+# Include these files
+!.editorconfig
+!.gitignore
+!Dockerfile
+!Makefile
+!README.md

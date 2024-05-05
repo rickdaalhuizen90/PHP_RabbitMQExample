@@ -1,0 +1,40 @@
+root = true
+
+[*]
+indent_style = space
+indent_size = 4
+tab_width = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[Makefile]
+indent_style = tabs
+
+[*.php]
+# PHP coding standards
+# https://www.php-fig.org/psr/psr-12/
+
+# Indentation
+indent_size = 4
+indent_style = space
+
+# Line endings
+end_of_line = lf
+
+# Spaces
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# Tabs
+tab_width = 4
+
+# Braces
+brace_style = 1tbs
+
+# Use of semicolons
+semicolon_after_instruction = true
+
+# Variable naming
+variable_naming = lower_case_with_underscores
