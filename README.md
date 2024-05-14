@@ -4,19 +4,20 @@ A simple example of using RabbitMQ with PHP to send and receive messages.
 
 ## Getting Started
 
-1. Start the server:
-   ```
-   make start
-   ```
-2. Build the PHP Docker image:
+1. Build the PHP Docker image:
    ```
    make build
    ```
+2. Start the server:
+   ```
+   make start
+   ```
 3. Stop the server:
    ```
-   make test
+   make stop
    ```
-
+4. Test connection
+   [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 ## How it Works
 
 The application uses a **Producer** to send messages and a **Consumer** to receive them. The communication happens through RabbitMQ, without direct communication between the two.
