@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  rabbitmq:
+    build:
+      context: ./rabbitmq
+      dockerfile: Dockerfile
+    image: rabbitmq:latest
+    ports:
+      - 15672:15672
+    networks:
+      - app-network
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: app:latest
+    ports:
+      - 8000:8000
+    depends_on:
+      - rabbitmq
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

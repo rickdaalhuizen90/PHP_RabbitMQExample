@@ -15,7 +15,7 @@ class RabbitMQManager
 
     private function __construct()
     {
-        $this->connection = new AMQPStreamConnection('0.0.0.0', 15672, 'guest', 'guest'); // use .env or server variable
+        $this->connection = new AMQPStreamConnection('rabbitmq', 5672, 'guest', 'guest'); // use .env or server variable
         $this->channel = $this->connection->channel();
         $this->channel->queue_declare('hello'); // use .env
     }
