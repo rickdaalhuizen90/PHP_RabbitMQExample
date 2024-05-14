@@ -24,8 +24,11 @@ readonly class Consumer
             echo ' [x] Received ', $msg->body, "\n";
         });
 
-        while ($this->instance->getChannel()->is_consuming()) {
-            $this->instance->getChannel()->wait();
-        }
+        // Close Socker after 3 seconds
+        // $timeout = 3;
+        // while ($timeout > 0 && $this->instance->getChannel()->is_consuming()) {
+        //     $this->instance->getChannel()->wait();
+        //     $timeout--;
+        // }
     }
 }

@@ -4,7 +4,7 @@ A simple example of using RabbitMQ with PHP to send and receive messages.
 
 ## Getting Started
 
-1. Start the RabbitMQ server:
+1. Start the server:
    ```
    make start
    ```
@@ -12,7 +12,7 @@ A simple example of using RabbitMQ with PHP to send and receive messages.
    ```
    make build
    ```
-3. Run the PHP application:
+3. Stop the server:
    ```
    make test
    ```
@@ -33,4 +33,4 @@ The application uses a **Producer** to send messages and a **Consumer** to recei
 
 ## TODO
 
-- [ ] Fix the `Uncaught PhpAmqpLib\Exception\AMQPIOException: stream_socket_client()` error that occurs when the PHP application tries to connect to the RabbitMQ server. This may be due to network configuration issues or the RabbitMQ server not being accessible from the PHP application's container.
+- [x] Fix the `Uncaught PhpAmqpLib\Exception\AMQPIOException: stream_socket_client()` error that occurs when the PHP application tries to connect to the RabbitMQ server. This may be due to network configuration issues or the RabbitMQ server not being accessible from the PHP application's container.
